@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "uniqid-1",
+      "name": "Berat Deniz",
+      "salary": "8500",
+      "department": "Bilişim"
+    },
+    {
+      "id": "uniqid-2",
+      "name": "Burak Deniz",
+      "salary": "15000",
+      "department": "Tasarım"
+    },
+    {
+      "id": "uniqid-3",
+      "name": "Neriman Deniz"
+    },
+    {
+      "id": "uniqid-4",
+      "name": "Fikri Deniz",
+      "salary": "9000",
+      "department": "Esnaf"
+    },
+    {
+      "id": "lc3px0sb",
+      "name": "test",
+      "department": "test",
+      "salary": "test"
+    }
+  ],
+  "test": [
+    {
+      "id": 1,
+      "name": "test"
+    }
+  ]
+}
