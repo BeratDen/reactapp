@@ -1,7 +1,8 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import UserConsumer from "../../context";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class User extends Component {
   constructor(props) {
@@ -25,13 +26,12 @@ class User extends Component {
   };
   onDeleteUser = async (dispatch, e) => {
     const { id } = this.props;
-    console.log(id);
+    await axios.delete(`http://localhost:3001/users/${id}`);
     dispatch({ type: "DELETE_USER", payload: id });
-    await axios.delete("http://localhost:3001/users/" + id);
   };
   render() {
     // Destructing
-    const { name, department, salary } = this.props;
+    const { id, name, department, salary } = this.props;
     const { isVisible } = this.state;
     return (
       <UserConsumer>
@@ -65,6 +65,11 @@ class User extends Component {
                     <p className="card-text">Maaş : {salary}</p>
                     <p className="card-text">Departman : {department}</p>
                     <p>{this.state.test}</p>
+                    <Link to={`/users/edit/${id}`}>
+                      <button className="btn btn-info btn-sm">
+                        Kullanıcı Güncelle
+                      </button>
+                    </Link>
                   </div>
                 ) : null}
               </div>

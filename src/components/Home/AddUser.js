@@ -1,10 +1,7 @@
-import { isVisible } from "@testing-library/user-event/dist/utils";
 import axios from "axios";
 import React, { Component } from "react";
 import posed from "react-pose";
 import UserConsumer from "../../context";
-
-var uniqid = require("uniqid");
 
 const Animation = posed.div({
   visible: {
@@ -46,20 +43,16 @@ class AddUser extends Component {
     let { name, department, salary } = this.state;
 
     const newUser = {
-      id: uniqid(),
       name,
       department,
       salary,
     };
+
+    const response = await axios.post("http://localhost:3001/users/", newUser);
+
     dispatch({
       type: "ADD_USER",
-      payload: newUser,
-    });
-    await axios.post("http://localhost:3001/users/", newUser);
-    this.setState({
-      name: "",
-      department: "",
-      salary: "",
+      payload: response.data,
     });
   };
 
