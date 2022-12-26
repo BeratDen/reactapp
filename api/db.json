@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": "uniqid-1",
       "name": "Berat Deniz",
-      "salary": "8500",
-      "department": "Bilişim"
+      "department": "Bilişim",
+      "salary": "10000",
+      "id": "uniqid-1"
     },
     {
       "id": "uniqid-2",
@@ -23,10 +23,16 @@
       "department": "Esnaf"
     },
     {
-      "id": "lc3px0sb",
-      "name": "test",
-      "department": "test",
-      "salary": "test"
+      "name": "Zuhal Topal",
+      "department": "Diyet",
+      "salary": "0",
+      "id": "DOwAy7Q"
+    },
+    {
+      "name": "Harika Enfes",
+      "department": "İnsan Kaynakları",
+      "salary": "10000",
+      "id": "DPeXUG_"
     }
   ],
   "test": [
